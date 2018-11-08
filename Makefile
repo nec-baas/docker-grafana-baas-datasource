@@ -1,4 +1,4 @@
-NAME = necbaas/grafana
+NAME = necbaas/grafana-server
 
 PORT_OPTS = -p 3000:3000
 
