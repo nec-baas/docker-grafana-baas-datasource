@@ -1,6 +1,6 @@
 FROM grafana/grafana
 
-ENV VERSION 0.0.4
+ENV VERSION 0.0.5
 
 ADD dists/baas-grafana-datasource-$VERSION.tar.gz /tmp
 
