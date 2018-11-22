@@ -1,7 +1,7 @@
 Grafana Server : BaaS Datasource 入り
 =====================================
 
-BaaS Object Storage Datasource Plugin 入りの Grafana Server Dockerfile です。
+[BaaS Object Storage Datasource Plugin](https://github.com/nec-baas/grafana-baas-object-datasource) 入りの Grafana Server Dockerfile です。
 
 利用手順
 --------
