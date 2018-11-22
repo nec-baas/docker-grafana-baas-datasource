@@ -17,4 +17,4 @@ daemon:
 	docker run -d $(PORT_OPTS) $(NAME)
 
 bash:
-	docker run -it --rm $(NAME) /bin/bash
+	docker run -it --rm --entrypoint /bin/bash $(NAME)

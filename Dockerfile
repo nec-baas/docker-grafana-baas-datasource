@@ -1,10 +1,9 @@
 FROM grafana/grafana
 
-ENV VERSION 0.0.5
+ENV VERSION 7.5.0-b1
 
-ADD dists/baas-grafana-datasource-$VERSION.tar.gz /tmp
+ADD dists/grafana-baas-object-datasource-$VERSION.tar.gz /tmp
 
-RUN cp -r /tmp/baas-grafana-datasource-$VERSION /var/lib/grafana/plugins/baas-grafana-datasource
+RUN cp -r /tmp/grafana-baas-object-datasource-7.5.0-b1 /var/lib/grafana/plugins/grafana-baas-object-datasource
 
 #ENTRYPOINT /bin/bash
-
