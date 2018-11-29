@@ -12,10 +12,11 @@ RUN apt-get update \
     && echo "grafana ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
 
 # install plugin
-ADD dists/grafana-baas-object-datasource-$VERSION.tar.gz /tmp
+COPY dists/grafana-baas-object-datasource-$VERSION.tar.gz /tmp
 
-RUN cp -r /tmp/grafana-baas-object-datasource-$VERSION /var/lib/grafana/plugins/grafana-baas-object-datasource \
-    && chown -R grafana:grafana /var/lib/grafana/plugins/grafana-baas-object-datasource
+RUN cd /var/lib/grafana/plugins \
+    && tar xvzf /tmp/grafana-baas-object-datasource-$VERSION.tar.gz \
+    && mv grafana-baas-object-datasource-$VERSION grafana-baas-object-datasource
 
 USER grafana
 
